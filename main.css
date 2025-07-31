@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fedeeb; /* Light pink */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.title::before,
+.title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  height: 1.5px;
+  background-color: #000;
+}
+
+.title::before {
+  left: -100px;
+}
+
+.title::after {
+  right: -100px;
+}
+
+.envelope {
+  width: 220px;          /* có thể điều chỉnh tuỳ ý */
+  height: 220px;
+  display: flex;          /* căn giữa ảnh */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;       /* cắt phần ảnh thừa, giữ viền sạch */
+}
+
+/* Ảnh tự vừa khung, không méo */
+.envelope img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;    /* giữ tỷ lệ gốc */
+}
+
+.read-button {
+  background-color: #f8bbd0;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.read-button:hover {
+  background-color: #f48fb1;
+}
